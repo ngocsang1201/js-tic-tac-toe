@@ -1,5 +1,6 @@
 import { getCellElementList, getCurrentTurnElement } from './selectors.js';
-import { TURN } from './constants.js';
+import { CELL_VALUE, TURN } from './constants.js';
+import { checkGameStatus } from './utils.js';
 
 /**
  * Global variables
@@ -39,6 +40,12 @@ function handleCellElementClick(cell, index) {
 	if (isClicked) return;
 
 	cell.classList.add(currentTurn);
+
+	// const currentValue = currentTurn === TURN.CROSS ? CELL_VALUE.CROSS : CELL_VALUE.CIRCLE;
+	// cellValues[index] = currentValue;
+
+	// const gameStatus = checkGameStatus(cellValues);
+	// console.log(gameStatus);
 
 	toggleTurn();
 }
