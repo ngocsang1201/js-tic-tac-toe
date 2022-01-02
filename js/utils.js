@@ -45,7 +45,7 @@ export function checkGameStatus(cellValues) {
 	// It's not required to write everything just in this function.
 
 	if (!Array.isArray(cellValues) || cellValues.length !== 9) {
-		throw new Error('Invalid cell values');
+		throw new Error('checkGameStatus: Invalid cell values');
 	}
 
 	const winSetValues = [
@@ -81,7 +81,7 @@ export function checkGameStatus(cellValues) {
 
 	const isEnded = cellValues.every((value) => value !== '');
 	return {
-		status: isEnded ? GAME_STATUS.ENDED : GAME_STATUS.PLAYING,
+		status: isEnded ? GAME_STATUS.DRAW : GAME_STATUS.PLAYING,
 		winPositions: [],
 	};
 }

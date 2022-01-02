@@ -5,7 +5,7 @@
 // 4. Game status
 
 export function getCellElementList() {
-	return document.querySelectorAll('ul#cellList > li');
+	return document.querySelectorAll('#cellList > li');
 }
 
 export function getCurrentTurnElement() {
@@ -18,4 +18,8 @@ export function getCellElementAtIdx(index) {
 
 export function getGameStatusElement() {
 	return document.getElementById('gameStatus');
+}
+
+export function getReplayButtonElement() {
+	return document.getElementById('replayGame');
 }

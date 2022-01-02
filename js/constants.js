@@ -11,7 +11,7 @@ export const CELL_VALUE = {
 
 export const GAME_STATUS = {
 	PLAYING: 'PLAYING',
-	ENDED: 'END GAME',
+	DRAW: 'DRAW',
 	X_WIN: 'X WIN',
 	O_WIN: 'O WIN',
 };
